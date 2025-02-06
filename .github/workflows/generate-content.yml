@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar script de generación
-        run: node generatePost.js "Genera contenido automáticamente"
+        run: node generatePost.js "Genera contenido automáticamente para blog de mascotas"
 
       - name: Commit y push de nuevos posts
         run: |
