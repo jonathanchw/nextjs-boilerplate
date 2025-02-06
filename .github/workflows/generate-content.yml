@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar script de generación
-        run: node generatePost.js "Genera contenido automáticamente para blog de mascotas"
+        run: node generatePost.js "paseo de perros y gatos" # modificar aca para que tome pedidos de otro lado
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
