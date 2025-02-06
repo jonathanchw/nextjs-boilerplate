@@ -2,8 +2,9 @@ name: Generar Post Automáticamente
 
 on:
   schedule:
-   # - cron: '0 */6 * * *' # Se ejecuta cada 6 horas
-    - cron: '*/5 * * * *' # Se ejecuta cada 5 minutos
+    - cron: '*/5 * * * *' # Se ejecuta cada 5 minutos (para pruebas)
+    # - cron: '0 */6 * * *' # Se ejecuta cada 6 horas (producción)
+
 jobs:
   generate_post:
     runs-on: ubuntu-latest
@@ -22,6 +23,8 @@ jobs:
 
       - name: Ejecutar script de generación
         run: node generatePost.js "Genera contenido automáticamente para blog de mascotas"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit y push de nuevos posts
         run: |
