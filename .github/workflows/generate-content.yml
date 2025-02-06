@@ -2,7 +2,7 @@ name: Generar Post Automáticamente
 
 on:
   schedule:
-    - cron: '*/2 * * * *' # Se ejecuta cada 5 minutos (para pruebas)
+    - cron: '*/5 * * * *' # Se ejecuta cada 5 minutos (para pruebas)
     #- cron: '0 */3 * * *' # Se ejecuta cada 3 horas (producción)
 
 jobs:
