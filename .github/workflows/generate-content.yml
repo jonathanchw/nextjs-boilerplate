@@ -2,8 +2,8 @@ name: Generar Post Automáticamente
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Se ejecuta cada 6 horas
-
+   # - cron: '0 */6 * * *' # Se ejecuta cada 6 horas
+    - cron: '*/5 * * * *' # Se ejecuta cada 5 minutos
 jobs:
   generate_post:
     runs-on: ubuntu-latest
