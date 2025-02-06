@@ -9,9 +9,14 @@ jobs:
   generate_post:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # 🔥 Permiso para hacer git push
+
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Instalar Node.js
         uses: actions/setup-node@v4
