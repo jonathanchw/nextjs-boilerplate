@@ -2,8 +2,8 @@ name: Generar Post Automáticamente
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Se ejecuta cada 5 minutos (para pruebas)
-    # - cron: '0 */6 * * *' # Se ejecuta cada 6 horas (producción)
+    #- cron: '*/5 * * * *' # Se ejecuta cada 5 minutos (para pruebas)
+    - cron: '0 */3 * * *' # Se ejecuta cada 3 horas (producción)
 
 jobs:
   generate_post:
@@ -26,8 +26,13 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
+      - name: Generar título aleatorio
+        run: |
+          TITULOS=("Cuidados para perros en invierno" "Los mejores juguetes para gatos" "Cómo entrenar a tu cachorro" "Consejos para bañar a tu mascota" "Alimentación saludable para perros")
+          echo "TITLE=${TITULOS[$RANDOM % ${#TITULOS[@]}]}" >> $GITHUB_ENV
+
       - name: Ejecutar script de generación
-        run: node generatePost.js "paseo de perros y gatos" # modificar aca para que tome pedidos de otro lado
+        run: node generatePost.js "$TITLE"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
@@ -36,5 +41,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Nuevo post generado automáticamente" || echo "No hay cambios para hacer commit"
+          git commit -m "Nuevo post generado automáticamente: $TITLE" || echo "No hay cambios para hacer commit"
           git push
+
