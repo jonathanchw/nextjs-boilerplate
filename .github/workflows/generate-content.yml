@@ -36,6 +36,7 @@ jobs:
         run: node generatePost.js "$TITLE"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
       - name: Commit y push de nuevos posts
         run: |
