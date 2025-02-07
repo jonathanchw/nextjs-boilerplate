@@ -3,10 +3,22 @@
 import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
-  const [activePost, setActivePost] = useState(null);
+  type Post = {
+    slug: string;
+    title: string;
+    date: string;
+    description: string;
+    image?: string;
+    content: string;
+  };
+  
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [activePost, setActivePost] = useState<string | null>(null);
+
 
   useEffect(() => {
     async function fetchPosts() {
@@ -17,10 +29,11 @@ export default function Home() {
     fetchPosts();
   }, []);
 
-  const handlePostClick = (slug) => {
+  const handlePostClick = (slug: string) => {
     setActivePost(activePost === slug ? null : slug);
   };
-
+  
+  const activePostData = posts.find((post) => post.slug === activePost);
   return (
     <main className="max-w-5xl mx-auto py-10 bg-[#fef8ec] min-h-screen relative">
       <h1 className="text-4xl font-bold text-center mb-8 text-[#ff914d]">🐶 Blog de Mascotas</h1>
@@ -34,12 +47,23 @@ export default function Home() {
             layout
           >
             {image ? (
-              <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
+              <div className="relative w-full h-48">
+                <Image
+                  src={image}
+                  alt={title}
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority // Mejora la carga de imágenes principales
+                />
+              </div>
             ) : (
               <div className="w-full h-48 bg-gray-200 flex items-center justify-center rounded-lg mb-4">
                 <span className="text-gray-500">📷 Imagen no disponible</span>
               </div>
             )}
+
+
             <h2 className="text-xl font-semibold text-[#ff914d]">{title}</h2>
             <p className="text-gray-500 text-sm">{date}</p>
             <p className="mt-2 text-gray-700">{description}</p>
@@ -69,12 +93,19 @@ export default function Home() {
               <button className="absolute top-2 right-2 text-xl text-[#ff914d] hover:text-red-600" onClick={() => setActivePost(null)}>✖</button>
 
               {/* Imagen dentro del modal */}
-              {posts.find(post => post.slug === activePost)?.image ? (
-                <img
-                  src={posts.find(post => post.slug === activePost)?.image}
-                  alt="Post"
-                  className="w-full h-64 object-cover rounded-lg mb-4"
-                />
+
+
+              {activePostData?.image ? (
+                <div className="relative w-full h-64">
+                  <Image
+                    src={activePostData.image}
+                    alt="Post"
+                    width={600} // Ajusta según el tamaño deseado
+                    height={256} // 64 * 4 (tailwind h-64)
+                    className="w-full h-64 object-cover rounded-lg mb-4"
+                    priority
+                  />
+                </div>
               ) : (
                 <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg mb-4">
                   <span className="text-gray-500">📷 Imagen no disponible</span>

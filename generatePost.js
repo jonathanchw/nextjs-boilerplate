@@ -10,7 +10,6 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const PLACEHOLDER_IMAGE = "https://via.placeholder.com/600";
 const TITLES_FILE = path.join(process.cwd(), "usedTitles.json");
-const TITLES_JSON_FILE = path.join(process.cwd(), "titles.json");
 const MAX_HISTORY = 100;
 
 // Cargar historial de títulos
@@ -26,6 +25,9 @@ function saveTitleHistory(history) {
   fs.writeFileSync(TITLES_FILE, JSON.stringify(history.slice(-MAX_HISTORY)), "utf8");
 }
 
+// Generar un título aleatorio sin repetición
+const TITLES_JSON_FILE = path.join(process.cwd(), "titles.json");
+
 // Cargar títulos desde titles.json
 function loadPossibleTitles() {
   if (fs.existsSync(TITLES_JSON_FILE)) {
@@ -40,7 +42,7 @@ function generateUniqueTitle() {
 
   if (possibleTitles.length === 0) {
     console.error("❌ No hay títulos en titles.json");
-    return "Título por defecto";
+    return "Título por defecto"; // Fallback en caso de error
   }
 
   let history = loadTitleHistory();
