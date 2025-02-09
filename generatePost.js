@@ -3,6 +3,8 @@ import path from "path";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
+import { createCanvas, loadImage } from "canvas";
+import { postToTwitter } from "./postToTwitter.js";
 
 dotenv.config();
 
@@ -75,6 +77,70 @@ async function fetchPexelsImage(query) {
   }
 }
 
+// 🎨 Generar imagen para redes sociales
+async function generateSocialImage(title, summary, imageUrl, slug) {
+  const width = 800;
+  const height = 420;
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext("2d");
+
+  try {
+    // 🔥 Cargar la imagen de fondo
+    const image = await loadImage(imageUrl);
+    ctx.drawImage(image, 0, 0, width, height);
+
+    // 🔳 Agregar overlay semi-transparente
+    ctx.fillStyle = "rgba(0, 0, 0, 0.6)";
+    ctx.fillRect(0, height - 120, width, 120);
+
+    // Configurar texto
+    ctx.fillStyle = "white";
+    ctx.font = "bold 28px Arial";
+    ctx.textAlign = "center";
+
+    // 🔹 Dividir el título en líneas si es muy largo
+    const maxWidth = width - 40;
+    const words = title.split(" ");
+    let lines = [];
+    let currentLine = words[0];
+
+    for (let i = 1; i < words.length; i++) {
+      const word = words[i];
+      const widthTest = ctx.measureText(currentLine + " " + word).width;
+      if (widthTest < maxWidth) {
+        currentLine += " " + word;
+      } else {
+        lines.push(currentLine);
+        currentLine = word;
+      }
+    }
+    lines.push(currentLine);
+
+    // Ajustar posición del título
+    const lineHeight = 32;
+    const titleY = height - 85 - (lines.length - 1) * lineHeight;
+
+    lines.forEach((line, index) => {
+      ctx.fillText(line, width / 2, titleY + index * lineHeight);
+    });
+
+    // Dibujar descripción
+    ctx.font = "20px Arial";
+    ctx.fillText(summary, width / 2, height - 30);
+
+    // 📁 Guardar la imagen en `public/social_images/`
+    const outputPath = path.join("public", "social_images", `${slug}.png`);
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
+    const out = fs.createWriteStream(outputPath);
+    const stream = canvas.createPNGStream();
+    stream.pipe(out);
+    out.on("finish", () => console.log(`✅ Imagen para redes generada: ${outputPath}`));
+  } catch (error) {
+    console.error("❌ Error al generar la imagen social:", error);
+  }
+}
+
 async function generatePost() {
   const title = generateUniqueTitle();
   console.log(`✍️ Generando post sobre: ${title}...`);
@@ -105,6 +171,40 @@ image: "${imageUrl}"
   const postPath = path.join("posts", `${slug}.md`);
   fs.writeFileSync(postPath, frontMatter + content, "utf8");
   console.log(`✅ Post generado en: ${postPath}`);
+
+  // 🔥 Generar imagen social
+  await generateSocialImage(title, `Artículo sobre ${title}`, imageUrl, slug);
+
+  console.log("🚀 Publicando en Twitter...");
+  const blogUrl = process.env.SITE_URL; // Asegura que haya un valor por defecto
+  const tweetText = `${title}\n\nArtículo nuevo en el blog 🚀\n\n🔗 Lee más: ${blogUrl}`; //Lee más: ${blogUrl}/posts/${slug}`;
+
+  async function waitForFile(filePath, maxRetries = 10, delayMs = 500) {
+    let retries = 0;
+    while (!fs.existsSync(filePath) && retries < maxRetries) {
+      console.log(`⏳ Esperando a que la imagen se genere... (${retries + 1}/${maxRetries})`);
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+      retries++;
+    }
+    return fs.existsSync(filePath);
+  }
+
+  const imagePath = path.join("public", "social_images", `${slug}.png`);
+  console.log(`📂 Verificando imagen en: ${imagePath}`);
+  const fileExists = await waitForFile(imagePath);
+  if (!fileExists) {
+    console.error(`❌ Imagen no encontrada en ${imagePath}, abortando publicación.`);
+    return;
+  }
+
+  await postToTwitter(tweetText, imagePath);
+
+
 }
 
 generatePost();
+
+
+
+
+
