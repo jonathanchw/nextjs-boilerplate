@@ -41,6 +41,7 @@ jobs:
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
           TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          SITE_URL: ${{ secrets.SITE_URL }}
 
       - name: Commit y push de nuevos posts
         run: |
