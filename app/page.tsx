@@ -60,7 +60,7 @@ export default function Home() {
           {theme === "dark" ? "☀️" : "🌙"}
         </button>
       </div>
-      <PostLayout posts={posts} handlePostClick={handlePostClick} activePost={activePost} />
+      <PostLayout posts={posts} handlePostClick={handlePostClick} activePost={!!activePost} />
       {/* Modal de post activo */}
       <AnimatePresence>
         {activePost && (
