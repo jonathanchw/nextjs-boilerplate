@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useTheme } from "next-themes";
+import PostLayout from "./PostLayout";
 
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+
   type Post = {
     slug: string;
     title: string;
@@ -37,42 +41,27 @@ export default function Home() {
 
   const activePostData = posts.find((post) => post.slug === activePost);
   return (
-    <main className="max-w-5xl mx-auto py-10 bg-[#fef8ec] min-h-screen relative">
-      <h1 className="text-4xl font-bold text-center mb-8 text-[#ff914d]">🐶 Blog de Mascotas</h1>
-
-      <div className={`grid md:grid-cols-2 gap-6 ${activePost ? "blur-sm" : ""}`}>
-        {posts.map(({ slug, title, date, description, image }) => (
-          <motion.div
-            key={slug}
-            className="relative bg-white shadow-md p-6 rounded-xl cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg border border-[#ff914d]"
-            onClick={() => handlePostClick(slug)}
-            layout
-          >
-            {image ? (
-              <div className="relative w-full h-48">
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  className="object-cover rounded-lg"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority // Mejora la carga de imágenes principales
-                />
-              </div>
-            ) : (
-              <div className="w-full h-48 bg-gray-200 flex items-center justify-center rounded-lg mb-4">
-                <span className="text-gray-500">📷 Imagen no disponible</span>
-              </div>
-            )}
-
-
-            <h2 className="text-xl font-semibold text-[#ff914d]">{title}</h2>
-            <p className="text-gray-500 text-sm">{date}</p>
-            <p className="mt-2 text-gray-700">{description}</p>
-          </motion.div>
-        ))}
+    <main className="max-w-none px-4 md:px-8 lg:px-20 py-10 min-h-screen relative">
+      <div className="flex justify-between items-center mb-8 px-4">
+        <div className="flex items-center space-x-3">
+          <Image
+            src="/images/logomascotafelizshop64x64.png"
+            alt="Logo"
+            width={50}
+            height={50}
+            className="rounded-full"
+          />
+          <h1 className="text-4xl font-bold text-[#e49b62]">Mascota Feliz Shop</h1>
+        </div>
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="px-4 py-2 bg-[#f2f0ed] dark:bg-[#6b5652] rounded-lg shadow text-[#91503a] dark:text-[#e49b62]"
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
       </div>
-
+      <PostLayout posts={posts} handlePostClick={handlePostClick} activePost={!!activePost} />
+      {/* Modal de post activo */}
       <AnimatePresence>
         {activePost && (
           <motion.div
@@ -83,46 +72,52 @@ export default function Home() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white p-6 rounded-xl shadow-2xl max-w-2xl w-full relative overflow-auto"
+              className="bg-[#f2f0ed] dark:bg-[#6b5652] p-6 rounded-xl shadow-2xl max-w-2xl w-full relative overflow-auto"
               style={{
                 maxHeight: "90vh",
                 margin: "5vh auto",
                 borderRadius: "15px",
                 scrollbarWidth: "thin",
-                scrollbarColor: "#ff914d #f3f3f3"
+                scrollbarColor: "#e49b62 #f3f3f3",
               }}
             >
-              <button className="absolute top-2 right-2 text-xl text-[#ff914d] hover:text-red-600" onClick={() => setActivePost(null)}>✖</button>
+              <button
+                className="absolute top-2 right-2 text-[#e49b62] dark:text-[#a1b56c] hover:text-red-600"
+                onClick={() => setActivePost(null)}
+              >
+                ✖
+              </button>
 
-              {/* Imagen dentro del modal */}
-
-
+              {/* Imagen en el modal */}
               {activePostData?.image ? (
                 <div className="relative w-full h-64">
                   <Image
                     src={activePostData.image}
                     alt="Post"
-                    width={600} // Ajusta según el tamaño deseado
-                    height={256} // 64 * 4 (tailwind h-64)
+                    width={600}
+                    height={256}
                     className="w-full h-64 object-cover rounded-lg mb-4"
                     priority
                   />
                 </div>
               ) : (
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg mb-4">
-                  <span className="text-gray-500">📷 Imagen no disponible</span>
+                <div className="w-full h-64 bg-[#a1b56c] flex items-center justify-center rounded-lg mb-4">
+                  <span className="text-[#91503a]">📷 Imagen no disponible</span>
                 </div>
               )}
 
-              <ReactMarkdown className="prose mt-4 text-gray-700">
-                {posts.find(post => post.slug === activePost)?.content || "No hay contenido disponible."}
+              <ReactMarkdown className="prose mt-4 text-[#6b5652] dark:text-[#f2f0ed]">
+                {posts.find((post) => post.slug === activePost)?.content ||
+                  "No hay contenido disponible."}
               </ReactMarkdown>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
       <Analytics />
       <SpeedInsights />
     </main>
+
   );
 }
