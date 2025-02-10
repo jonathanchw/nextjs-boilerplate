@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
     image?: string;
     content: string;
   };
-  
+
   const [posts, setPosts] = useState<Post[]>([]);
   const [activePost, setActivePost] = useState<string | null>(null);
 
@@ -33,7 +34,7 @@ export default function Home() {
   const handlePostClick = (slug: string) => {
     setActivePost(activePost === slug ? null : slug);
   };
-  
+
   const activePostData = posts.find((post) => post.slug === activePost);
   return (
     <main className="max-w-5xl mx-auto py-10 bg-[#fef8ec] min-h-screen relative">
@@ -121,6 +122,7 @@ export default function Home() {
         )}
       </AnimatePresence>
       <Analytics />
+      <SpeedInsights />
     </main>
   );
 }
