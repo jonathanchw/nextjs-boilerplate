@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Analytics } from '@vercel/analytics/next';
 
 
 export default function Home() {
@@ -119,6 +120,7 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+      <Analytics />
     </main>
   );
 }
