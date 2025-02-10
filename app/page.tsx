@@ -41,8 +41,7 @@ export default function Home() {
 
   const activePostData = posts.find((post) => post.slug === activePost);
   return (
-    <main className="max-w-none px-4 md:px-8 lg:px-20 py-10 bg-[#f2f0ed] min-h-screen relative">
-      {/* Encabezado con selector de tema */}
+    <main className="max-w-none px-4 md:px-8 lg:px-20 py-10 min-h-screen relative">
       <div className="flex justify-between items-center mb-8 px-4">
         <div className="flex items-center space-x-3">
           <Image

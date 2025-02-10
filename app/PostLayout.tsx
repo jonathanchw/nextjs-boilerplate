@@ -36,7 +36,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ posts, handlePostClick, activeP
   }, [posts]);
 
   return (
-    <div className={` bg-[#f2f0ed] flex flex-wrap gap-6 ${activePost ? "blur-sm" : ""}`}>
+    <div className={` flex flex-wrap gap-6 ${activePost ? "blur-sm" : ""}`}>
       {/* 🔥 Renderizado de posts y anuncios */}
       {shuffledPosts.map((item, index) =>
         item ? (
