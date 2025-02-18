@@ -1,84 +1,76 @@
 ---
 title: "Las enfermedades más comunes en perros y cómo prevenirlas"
-date: "2025-02-09"
+date: "2025-02-18"
 description: "Artículo sobre Las enfermedades más comunes en perros y cómo prevenirlas"
 tags: ["blog", "IA", "automatización"]
-image: "https://images.pexels.com/photos/29256670/pexels-photo-29256670.jpeg?auto=compress&cs=tinysrgb&h=350"
+image: "https://images.pexels.com/photos/30735575/pexels-photo-30735575.jpeg?auto=compress&cs=tinysrgb&h=350"
 ---
 
 ---
-title: Enfermedades comunes en perros: prevención y cuidado
-date: 2023-02-15
-description: Mantén a tu fiel amigo sano y feliz previniendo las enfermedades más comunes en perros. Descubre cómo protegerlo en este artículo informativo.
-tags: Perros, Salud animal, Enfermedades
-image: https://path.com/to/image.jpg
+title: Protegiendo a tu mejor amigo: Enfermedades comunes en perros y cómo prevenirlas
+date: 2023-02-28
+description: Descubre las enfermedades más comunes en perros y aprende cómo mantenerlos saludables con consejos preventivos y medidas prácticas.
+tags: [salud canina, prevención de enfermedades, mascotas]
+image: /images/perro-sano.jpg
 ---
 
-## Enfermedades comunes en perros: prevención y cuidados
+## Enfermedades más comunes en perros y cómo prevenirlas
 
-Los perros, nuestros queridos compañeros caninos, son susceptibles a varias enfermedades que pueden afectar su salud y bienestar. Como dueños responsables, es crucial que comprendamos las enfermedades más comunes y tomemos medidas preventivas para proteger a nuestros peludos amigos.
+Tener un perro es una experiencia gratificante, pero también implica la responsabilidad de mantenerlos sanos. Ciertas enfermedades son comunes entre los canes y es esencial conocerlas para tomar medidas preventivas.
 
-### Parvovirus
+### Enfermedades infecciosas
 
-**Síntomas:** Vómitos, diarrea sanguinolenta, letargo, pérdida de apetito
+#### Parvovirus
 
-**Prevención:** Vacunación, buena higiene y restricción del contacto con perros no vacunados
+* **Síntomas:** Vómitos, diarrea, deshidratación, apatía
+* **Prevención:** Vacunación a partir de las 6-8 semanas de edad
 
-### Moquillo
+#### Moquillo
 
-**Síntomas:** Secreción nasal y ocular, tos, neumonía, problemas neurológicos
+* **Síntomas:** Secreción nasal, tos, vómitos, diarrea, convulsiones
+* **Prevención:** Vacunación anual
 
-**Prevención:** Vacunación, evitar el contacto con perros infectados
+#### Leptospirosis
 
-### Hepatitis viral canina (CHV)
+* **Síntomas:** Fiebre, vómitos, diarrea, ictericia, daño renal
+* **Prevención:** Vacunación, control de roedores y evitar el contacto con aguas contaminadas
 
-**Síntomas:** Vómitos, diarrea, ictericia, fallo hepático
+### Enfermedades parasitarias
 
-**Prevención:** Vacunación, limitar el contacto con perros no vacunados
+#### Gusanos intestinales
 
-### Distemper
+* **Síntomas:** Heces oscuras, diarrea, vómitos, pérdida de peso
+* **Prevención:** Desparasitación periódica con medicamentos recomendados por el veterinario
 
-**Síntomas:** Fiebre, secreción nasal y ocular, tos, síntomas gastrointestinales, convulsiones
+#### Gusanos del corazón
 
-**Prevención:** Vacunación, evitar el contacto con perros infectados
+* **Síntomas:** Tos, dificultad para respirar, fatiga, pérdida de peso
+* **Prevención:** Medicamentos preventivos mensuales (inyecciones o pastillas)
 
-### Sarna
+#### Pulgas y garrapatas
 
-**Síntomas:** Picazón intensa, caída del cabello, enrojecimiento de la piel
+* **Síntomas:** Picazón intensa, enrojecimiento, dermatitis alérgica
+* **Prevención:** Productos tópicos o collares antipulgas y garrapatas, inspección regular del pelo del perro
 
-**Prevención:** Tratamiento regular contra pulgas y garrapatas, buena higiene
+### Enfermedades no infecciosas
 
-### Gusanos del corazón
+#### Displasia de cadera
 
-**Síntomas:** Tos, dificultad para respirar, pérdida de peso, fatiga
+* **Síntomas:** Cojera, dolor, dificultad para moverse
+* **Prevención:** Evitar el sobrepeso, ejercicio moderado, suplementos para las articulaciones
 
-**Prevención:** Medicación preventiva mensual, control de mosquitos
+#### Alergias
 
-### Infecciones de oído
+* **Síntomas:** Picazón, erupciones cutáneas, secreción nasal, estornudos
+* **Prevención:** Identificación y evitación de alérgenos (por ejemplo, alimentos, polen, polvo)
 
-**Síntomas:** Olor a levadura, sacudidas de cabeza, sensibilidad al tacto
+### Consejos de prevención general
 
-**Prevención:** Limpieza regular de oídos, evitar el contacto con agua contaminada
+* Mantén las vacunas al día.
+* Desparasita a tu perro regularmente.
+* Controla el peso de tu perro.
+* Proporciona una dieta saludable y equilibrada.
+* Realiza revisiones veterinarias periódicas.
+* Esteriliza o castra a tu perro para reducir el riesgo de ciertas enfermedades.
 
-### Alergias
-
-**Síntomas:** Picazón, erupciones cutáneas, problemas respiratorios
-
-**Prevención:** Identificación y evitación de alérgenos, uso de champús y acondicionadores hipoalergénicos
-
-### Cáncer
-
-**Síntomas:** Varían según el tipo de cáncer, pero pueden incluir bultos, pérdida de peso, letargo
-
-**Prevención:** Exámenes veterinarios regulares, dieta saludable, control de peso
-
-### Cuidados preventivos esenciales
-
-Además de las vacunas, existen otras medidas preventivas cruciales para mantener la salud de tu perro:
-
-* **Alimentación saludable:** Proporciona una dieta nutricionalmente equilibrada y evita las sobras de comida.
-* **Ejercicio regular:** El ejercicio ayuda a mantener un peso saludable, reduce el estrés y mejora la circulación.
-* **Higiene regular:** Baña a tu perro según sea necesario, cepilla su pelaje y limpia sus oídos.
-* **Visitas al veterinario:** Los exámenes regulares permiten la detección temprana de enfermedades y el tratamiento oportuno.
-
-Al tomar estas medidas preventivas, podemos proteger a nuestros amados perros de las enfermedades comunes y garantizarles una vida larga y saludable.
+Protegiendo a tu perro de estas enfermedades comunes, puedes brindarle una vida larga y saludable llena de amor y compañerismo. Recuerda consultar siempre con un veterinario para obtener consejos específicos y un plan de prevención adaptado a las necesidades individuales de tu mascota.
