@@ -145,7 +145,7 @@ async function generatePost() {
   const title = generateUniqueTitle();
   console.log(`✍️ Generando post sobre: ${title}...`);
 
-  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+  const model = genAI.getGenerativeModel({ model: "models/gemini-1.5-flash" });
   const prompt = `Genera un artículo en Markdown sobre: ${title}. Debe incluir:
   - Un título llamativo
   - Un resumen breve
