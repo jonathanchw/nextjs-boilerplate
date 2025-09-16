@@ -1,3 +1,5 @@
+This is an automated post generator powered by Gemini AI, using GitHub Actions bots to run tasks, deployed on the web and X (formerly Twitter).
+
 ### Links
 - [Demo Site -> https://mascotafelizshop.vercel.app/](https://mascotafelizshop.vercel.app/)
 - [Social Media X -> https://x.com/auto_blogs101](https://x.com/auto_blogs101)
