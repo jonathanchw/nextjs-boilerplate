@@ -1,6 +1,6 @@
 ---
 title: "Cómo limpiar los oídos de tu perro correctamente"
-date: "2025-02-15"
+date: "2025-09-18"
 description: "Artículo sobre Cómo limpiar los oídos de tu perro correctamente"
 tags: ["blog", "IA", "automatización"]
 image: "https://images.pexels.com/photos/14288003/pexels-photo-14288003.jpeg?auto=compress&cs=tinysrgb&h=350"
@@ -8,53 +8,55 @@ image: "https://images.pexels.com/photos/14288003/pexels-photo-14288003.jpeg?aut
 
 ```yaml
 ---
-title: Cómo limpiar los oídos de tu perro correctamente
-date: 2023-02-28
-description: Una guía paso a paso para mantener limpios y saludables los oídos de tu perro.
-tags: [cuidado del perro, salud del perro, oídos del perro]
-image: ./img/perro-limpiando-orejas.jpg
+title: "Orejas Impecables: La Guía Definitiva para Limpiar las Orejas de tu Perro"
+date: 2023-10-27
+description: Aprende cómo limpiar correctamente las orejas de tu perro para prevenir infecciones y mantenerlo feliz y saludable.
+tags: ["perros", "limpieza", "orejas", "salud", "mascotas"]
+image: "perro-limpiando-orejas.jpg" # Reemplaza con la URL de una imagen
 ---
+
+# Orejas Impecables: La Guía Definitiva para Limpiar las Orejas de tu Perro
+
+Mantener las orejas de tu perro limpias es crucial para su salud y bienestar.  La acumulación de cera, suciedad y humedad puede provocar infecciones dolorosas y molestas.  Esta guía te mostrará cómo limpiar las orejas de tu perro de forma segura y efectiva, evitando posibles problemas.
+
+## ¿Con qué frecuencia debo limpiar las orejas de mi perro?
+
+La frecuencia con la que necesitas limpiar las orejas de tu perro depende de su raza y estilo de vida.  Algunos perros necesitan una limpieza semanal, mientras que otros pueden necesitarla con menos frecuencia.  Observa las orejas de tu perro; si notas una acumulación excesiva de cera, suciedad u olor desagradable, es hora de limpiarlas.  Si tu perro tiene mucho pelo en las orejas, es probable que necesites limpiarlas con más frecuencia.
+
+## Lo que necesitarás:
+
+Antes de comenzar, asegúrate de tener a mano los siguientes materiales:
+
+* **Solución limpiadora específica para oídos de perros:** Nunca uses hisopos de algodón ni remedios caseros, ya que pueden dañar el delicado tímpano de tu perro.  Compra una solución limpiadora en una tienda de mascotas o veterinaria.
+* **Gasas o algodón:** Para aplicar la solución limpiadora.
+* **Toallas:** Para secar las orejas de tu perro.
+* **Golosinas:** Para recompensar a tu perro por su buena conducta.
+
+## Pasos para limpiar las orejas de tu perro:
+
+1. **Preparación:**  Habla con tu perro con un tono suave y tranquilizador.  Deja que te olfatee el limpiador para que se familiarice con el olor.  Dale algunas golosinas para que asocie la experiencia con algo positivo.
+
+2. **Aplicación de la solución:**  Llena el canal auditivo externo con la solución limpiadora, según las instrucciones del producto.  No introduzcas nada profundamente en el oído.
+
+3. **Masaje suave:**  Masajea suavemente la base de la oreja durante unos segundos para ayudar a distribuir la solución y aflojar la cera y la suciedad.
+
+4. **Limpieza:** Deja que tu perro sacuda la cabeza.  Usa una gasa limpia para limpiar suavemente la parte visible del oído externo, eliminando el exceso de cera y suciedad.  Nunca introduzcas la gasa en el canal auditivo.
+
+5. **Secado:** Seca cuidadosamente las orejas de tu perro con una toalla suave.
+
+## Señales de alerta:
+
+Si notas alguno de los siguientes síntomas, consulta a tu veterinario inmediatamente:
+
+* Enrojecimiento o inflamación en las orejas.
+* Mal olor intenso.
+* Exceso de cera oscura o marrón.
+* Sacudidas de cabeza frecuentes.
+* Rascado excesivo de las orejas.
+* Secreción oscura o sanguinolenta.
+
+
+## Conclusión:
+
+Limpiar las orejas de tu perro regularmente es una parte importante de su cuidado.  Siguiendo estos pasos y estando atento a cualquier señal de problema, puedes ayudar a mantener las orejas de tu perro saludables y felices.  Recuerda que si tienes alguna duda, siempre consulta con tu veterinario.
 ```
-
-## Cómo limpiar los oídos de tu perro correctamente
-
-Mantener limpios los oídos de tu perro es esencial para su salud y bienestar. La acumulación de suciedad, cera y residuos puede provocar infecciones, molestias e incluso pérdida auditiva. Aquí tienes una guía paso a paso sobre cómo limpiar los oídos de tu perro correctamente:
-
-### Materiales necesarios
-
-* Solución limpiadora de oídos específica para perros
-* Algodón o gasas
-* Toallitas de papel
-
-### Guía paso a paso
-
-**1. Revisa los oídos**
-
-Antes de limpiar, examina los oídos de tu perro para detectar cualquier signo de infección o irritación, como enrojecimiento, hinchazón o secreción. Si observas algo inusual, consulta a tu veterinario.
-
-**2. Humedece el algodón**
-
-Empapa una bola de algodón o gasa con solución limpiadora de oídos para perros. No uses un exceso de solución, ya que puede irritar el oído.
-
-**3. Limpia la oreja externa**
-
-Sostén con cuidado la oreja de tu perro hacia atrás y limpia suavemente el pabellón auricular externo con el algodón humedecido. Evita introducir el algodón en el canal auditivo.
-
-**4. Limpia el canal auditivo**
-
-Usando un nuevo algodón humedecido, inserta suavemente el extremo en el canal auditivo externo. Gira y retira el algodón para eliminar la suciedad y los residuos. No introduzcas el algodón más allá de lo que tu perro permita cómodamente.
-
-**5. Seca la oreja**
-
-Usa una toallita de papel para secar suavemente la oreja externa y el canal auditivo visible. Esto ayudará a prevenir infecciones.
-
-**6. Recompensa a tu perro**
-
-Recompensa a tu perro con elogios o golosinas por su buen comportamiento durante la limpieza.
-
-### Consejos adicionales
-
-* Limpia los oídos de tu perro regularmente, según las recomendaciones de tu veterinario.
-* No uses bastoncillos de algodón, ya que pueden dañar el canal auditivo.
-* Si tu perro se resiste a que le limpies los oídos, pide ayuda a otra persona o consulta a tu veterinario.
-* Presta atención a los signos de infección, como olores desagradables, enrojecimiento o hinchazón, y contacta con tu veterinario de inmediato si observas alguno de estos síntomas.
