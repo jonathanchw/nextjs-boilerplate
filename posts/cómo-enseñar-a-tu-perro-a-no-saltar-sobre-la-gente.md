@@ -1,52 +1,63 @@
 ---
 title: "Cómo enseñar a tu perro a no saltar sobre la gente"
-date: "2025-02-21"
+date: "2025-09-24"
 description: "Artículo sobre Cómo enseñar a tu perro a no saltar sobre la gente"
 tags: ["blog", "IA", "automatización"]
-image: "https://images.pexels.com/photos/13995085/pexels-photo-13995085.jpeg?auto=compress&cs=tinysrgb&h=350"
+image: "https://images.pexels.com/photos/20927257/pexels-photo-20927257.jpeg?auto=compress&cs=tinysrgb&h=350"
 ---
 
 ---
-title: ¡Domina los saltos! Adiestra a tu perro a no lanzarse sobre la gente
-date: 2023-03-08
-description: Sigue estos pasos comprobados para enseñar a tu perro a comportarse cortésmente y evitar los saltos emocionados sobre las personas.
-tags: [adiestramiento canino, comportamiento del perro, evitar saltos]
-image: /images/perro-saltando.jpg
+title: "Adiós a los Saltos: Enseña a tu Perro a Recibir Visitas con Buena Educación"
+date: 2023-10-27
+description: Guía completa para enseñar a tu perro a dejar de saltar sobre las personas, con consejos, técnicas y ejercicios prácticos.
+tags: ["adiestramiento canino", "perros", "educación canina", "saltos", "comportamiento"]
+image: "perro-bien-educado.jpg" # Reemplaza con la URL de una imagen adecuada
 ---
 
-## Enseña a tu perro a no saltar sobre la gente
+# Adiós a los Saltos: Enseña a tu Perro a Recibir Visitas con Buena Educación
 
-¿Cansado de que tu perro te salte encima, dejando a tus invitados manchados y a ti frustrado? Enseñarle a tu fiel amigo a controlar su entusiasmo y evitar los saltos sobre las personas puede transformar las interacciones sociales y mejorar la armonía en el hogar.
+¿Cansado de que tu perro te reciba con un entusiasmo desbordante (y saltos incontrolables)?  No te preocupes, ¡se puede solucionar!  Este artículo te guiará paso a paso para enseñarle a tu perro a dejar de saltar sobre la gente, convirtiendo esas visitas en momentos agradables para todos.
 
-### Técnicas efectivas
 
-**1. Ignora el salto:**
+## Por qué mi Perro Salta
 
-* Cuando tu perro salte, apártate, cruza los brazos y no hagas contacto visual.
-* Mantén esta postura hasta que tu perro se calme y se siente.
+Antes de empezar a entrenar, es importante entender por qué tu perro salta.  Generalmente, lo hacen por:
 
-**2. Recompensa la calma:**
+* **Excitación:** El encuentro con personas les genera una gran emoción que expresan saltando.
+* **Atención:**  Si en el pasado ha recibido atención (incluso regaños) mientras salta, puede asociar el comportamiento con una recompensa.
+* **Juego:** Puede interpretarlo como una forma de juego o interacción social.
 
-* Cuando tu perro se siente tranquilamente, prémialo con elogios, caricias o golosinas.
-* Recompensa solo cuando tu perro esté sentado o tranquilo, reforzando el comportamiento deseado.
 
-**3. Comando "Siéntate":**
+## Técnicas Efectivas para Eliminar los Saltos
 
-* Enseña a tu perro el comando "Siéntate".
-* Cuando las personas lleguen, dale el comando "Siéntate".
-* Recompensa a tu perro por permanecer sentado mientras saludas.
+Aquí te presentamos varias técnicas que puedes usar, combinándolas para obtener mejores resultados:
 
-**4. Correa y desincentivos:**
+### 1. Ignorar el Comportamiento
 
-* Mantén a tu perro con correa en presencia de invitados.
-* Si salta, tira suavemente de la correa hacia abajo, corrigiendo su comportamiento.
-* Evita los castigos físicos, ya que solo dañan la relación con tu perro.
+Esta es una técnica clave.  Cuando tu perro salte, ignóralo completamente: no lo mires, no lo toques, no hables con él.  Retira tu atención hasta que baje las cuatro patas.  Una vez que lo haga, inmediatamente recompénsalo con una palabra de aliento ("¡Bien!") o una golosina.
 
-### Consejos adicionales
+### 2. El Método del "Círculo de Seguridad"
 
-* **Sé consistente:** Aplica estas técnicas con todos en el hogar para reforzar el mensaje.
-* **Ten paciencia:** Adiestrar a un perro lleva tiempo y paciencia.
-* **Socializa a tu perro:** Exponer a tu perro a diferentes personas y situaciones le ayuda a aprender comportamientos sociales apropiados.
-* **Considera una clase de adiestramiento:** Un entrenador de perros profesional puede proporcionar orientación y apoyo adicionales.
+Crea un círculo imaginario alrededor de tus invitados. Si tu perro se acerca o salta, retrocede o guia a tu invitado a retroceder, hasta que tu perro se calme.  Cuando está tranquilo, elogiarlo y permitir la interacción.
 
-Siguiendo estos pasos, puedes enseñarle a tu perro a comportarse cortésmente, evitar los saltos sobre la gente y mejorar la convivencia general. Recuerda, la perseverancia y el refuerzo positivo son claves para el éxito en el adiestramiento de tu querido compañero.
+### 3. Enseñar un Comportamiento Alternativo
+
+Enseña a tu perro a sentarse o a quedarse quieto cuando alguien llega.  Cuando logre hacerlo, recompénsalo con mucha alegría y atención positiva.  Esta alternativa sustituye el salto por una conducta deseada.
+
+### 4. Entrenamiento con Golosinas
+
+Usa golosinas para recompensar el comportamiento deseado.  Cuando alguien se acerque, mantén una golosina cerca de su nariz.  Si se queda en cuatro patas, recompénsalo inmediatamente. Si salta, simplemente retira la mano con la golosina.
+
+### 5. La Importancia de la Consistencia
+
+La clave del éxito es la *consistencia*.  Todas las personas que interactúan con tu perro deben usar las mismas técnicas.  Si una persona le permite saltar, se deshará el trabajo de las demás.
+
+
+##  Consejos Adicionales
+
+* **Sé paciente:** El aprendizaje lleva tiempo y paciencia.  No te frustres si no ves resultados inmediatos.
+* **Mantén sesiones cortas:**  Sesiones de entrenamiento cortas y frecuentes son más efectivas que sesiones largas y esporádicas.
+* **Busca ayuda profesional:** Si tienes dificultades, considera la ayuda de un entrenador canino profesional.
+
+
+Con paciencia, consistencia y las técnicas adecuadas, podrás enseñar a tu perro a recibir visitas sin saltos descontrolados, creando un ambiente más armonioso para todos. ¡Recuerda celebrar los pequeños triunfos!
