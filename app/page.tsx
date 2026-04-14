@@ -8,19 +8,10 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useTheme } from "next-themes";
 import PostLayout from "./PostLayout";
-
+import type { Post } from "@/types/post";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
-
-  type Post = {
-    slug: string;
-    title: string;
-    date: string;
-    description: string;
-    image?: string;
-    content: string;
-  };
 
   const [posts, setPosts] = useState<Post[]>([]);
   const [activePost, setActivePost] = useState<string | null>(null);
@@ -73,6 +64,7 @@ export default function Home() {
           >
             <motion.div
               className="bg-[#f2f0ed] dark:bg-[#6b5652] p-6 rounded-xl shadow-2xl max-w-2xl w-full relative overflow-auto"
+              onClick={(e) => e.stopPropagation()}
               style={{
                 maxHeight: "90vh",
                 margin: "5vh auto",
@@ -106,7 +98,7 @@ export default function Home() {
                 </div>
               )}
 
-              <ReactMarkdown className="prose mt-4 text-[#6b5652] dark:text-[#f2f0ed]">
+              <ReactMarkdown className="post-markdown mt-4 text-[#6b5652] dark:text-[#f2f0ed]">
                 {posts.find((post) => post.slug === activePost)?.content ||
                   "No hay contenido disponible."}
               </ReactMarkdown>

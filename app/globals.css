@@ -18,6 +18,20 @@ body {
   @apply bg-background text-foreground transition-colors duration-300;
 }
 
+.post-markdown :is(p, ul, ol) {
+  margin-bottom: 0.75em;
+}
+
+.post-markdown :is(ul, ol) {
+  padding-left: 1.25em;
+}
+
+.post-markdown :is(h1, h2, h3) {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
 /* Scrollbar personalizada */
 ::-webkit-scrollbar {
   width: 8px;
