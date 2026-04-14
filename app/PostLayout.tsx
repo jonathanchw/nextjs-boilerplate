@@ -3,14 +3,7 @@
 import { useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-  image?: string;
-}
+import type { Post } from "@/types/post";
 
 interface PostLayoutProps {
   posts: Post[];
@@ -22,7 +15,10 @@ const PostLayout: React.FC<PostLayoutProps> = ({ posts, handlePostClick, activeP
   // 🔥 Mezclamos los posts para aleatoriedad
   const shuffledPosts = useMemo(() => {
     const copy = [...posts];
-    copy.sort(() => Math.random() - 0.5);
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
 
     // 🔥 Insertamos anuncios después de cada 3 o 5 posts
     const withAds = [];

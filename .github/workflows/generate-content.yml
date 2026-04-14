@@ -25,7 +25,7 @@ jobs:
           node-version: 20
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci
 
       - name: Generar título aleatorio
         run: |
