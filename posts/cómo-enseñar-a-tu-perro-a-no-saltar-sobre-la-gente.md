@@ -1,96 +1,96 @@
 ---
 title: "Cómo enseñar a tu perro a no saltar sobre la gente"
-date: "2026-04-12"
+date: "2026-05-03"
 description: "Artículo sobre Cómo enseñar a tu perro a no saltar sobre la gente"
 tags: ["blog", "IA", "automatización"]
-image: "https://images.pexels.com/photos/31744794/pexels-photo-31744794.jpeg?auto=compress&cs=tinysrgb&h=350"
+image: "https://images.pexels.com/photos/34193051/pexels-photo-34193051.jpeg?auto=compress&cs=tinysrgb&h=350"
 ---
 
 ```markdown
 ---
-title: "¡Adiós a los Saltos Indeseados! Enseña a Tu Perro a Saludar con Elegancia"
+title: "Adiós a los Saltos Inoportunos: La Guía Definitiva para Entrenar a Tu Perro"
 date: 2023-10-27
-description: "Descubre estrategias efectivas y pasos prácticos para enseñar a tu perro a no saltar sobre las personas, fomentando un saludo calmado y educado."
+description: "Aprende estrategias efectivas y positivas para enseñar a tu perro a saludar a las personas con las patas en el suelo, fomentando un comportamiento tranquilo y respetuoso."
 tags:
-  - adiestramiento
-  - perros
-  - comportamiento canino
-  - entrenamiento
-  - no saltar
+  - entrenamiento canino
+  - perro
+  - salto
+  - comportamiento
   - obediencia
-image: assets/images/perro-no-saltar.jpg
+  - refuerzo positivo
+image: /images/perro-no-saltar.jpg
 ---
 
-# ¡Adiós a los Saltos Indeseados! Enseña a Tu Perro a Saludar con Elegancia
+# ¡Patas en el Suelo! La Guía Definitiva para Enseñar a Tu Perro a No Saltar Sobre las Personas
 
-## Un Saludo Calmado es Posible
+**Resumen:** Los saltos entusiastas de un perro pueden ser adorables, pero a menudo resultan incómodos o peligrosos para quienes los reciben. Este artículo te proporcionará estrategias de entrenamiento positivas y consistentes para enseñar a tu amigo peludo a saludar a las personas con las cuatro patas en el suelo, promoviendo interacciones tranquilas y agradables para todos.
 
-¿Tu perro salta sobre cada persona que entra por la puerta o se acerca en la calle, dejando huellas de patas o, peor aún, arañazos? Este comportamiento, aunque a menudo motivado por el entusiasmo y el deseo de atención, puede ser molesto, peligroso para niños pequeños o personas mayores, y poco higiénico. Pero no te preocupes, con paciencia, consistencia y las técnicas adecuadas, puedes enseñar a tu perro a saludar de una manera mucho más educada: con sus cuatro patas firmemente en el suelo. Este artículo te guiará paso a paso para lograrlo.
+---
 
-## 1. Entendiendo el Comportamiento: ¿Por Qué Saltan los Perros?
+## Introducción: Entendiendo el Instinto de Saltar
 
-Antes de corregir un comportamiento, es fundamental entender por qué ocurre. Los perros suelen saltar por varias razones:
+El momento en que llegas a casa o cuando un invitado cruza la puerta, tu perro se lanza con entusiasmo, intentando alcanzar tu cara o simplemente expresando su alegría. Aunque su intención es pura, saltar sobre las personas es un comportamiento que puede ser molesto, intimidante para niños o personas mayores, y hasta peligroso si el perro es grande.
 
-*   **Búsqueda de Atención:** Es la razón más común. Cuando saltan y reciben una reacción (incluso si es negativa como un empujón o un "¡no!"), interpretan que han logrado captar tu atención.
-*   **Emoción y Excitación:** Al verte a ti o a un invitado, su nivel de energía se dispara y saltar es una forma de liberar esa emoción.
-*   **Aprendizaje:** Si de cachorros se les permitió saltar o si alguna vez recibieron atención o premios por hacerlo, es un comportamiento aprendido y reforzado.
-*   **Instinto de Juego:** Invitar a jugar o una forma de comunicación canina.
+Los perros saltan por varias razones:
 
-## 2. Los Fundamentos del Entrenamiento: Paciencia y Consistencia
+*   **Búsqueda de atención:** Han aprendido que saltar les consigue una reacción (aunque sea negativa, como un "¡No saltes!").
+*   **Emoción y saludo:** Es su forma natural de saludar a sus congéneres, olfateando la cara y mostrando afecto.
+*   **Refuerzo accidental:** Muchas veces, sin darnos cuenta, reforzamos el comportamiento al empujarles, hablarles o incluso mirarlos cuando saltan.
 
-El éxito en cualquier adiestramiento canino se basa en dos pilares:
+La buena noticia es que este comportamiento es completamente entrenable. Con paciencia, consistencia y las técnicas adecuadas, puedes enseñar a tu perro a saludar de una manera más calmada y respetuosa.
 
-*   **Paciencia:** Cambiar un comportamiento arraigado lleva tiempo. No esperes resultados de la noche a la mañana.
-*   **Consistencia:** Todos los miembros de la familia y cualquier persona que interactúe con el perro deben aplicar las mismas reglas y técnicas. La inconsistencia solo confunde a tu perro.
+## Principios Clave del Entrenamiento Positivo
 
-La clave es **reforzar lo que quieres que haga** (las cuatro patas en el suelo) e **ignorar lo que no quieres que haga** (saltar).
+Antes de sumergirnos en las técnicas, es fundamental entender los pilares del entrenamiento que aplicaremos:
 
-## 3. Paso a Paso: El Entrenamiento Práctico
+1.  **Consistencia:** Todos los miembros de la familia y los visitantes deben aplicar las mismas reglas y técnicas. La inconsistencia confunde al perro.
+2.  **Refuerzo Positivo:** Premia el comportamiento que deseas ver. Esto incluye golosinas, elogios, caricias o juguetes, siempre que se ofrezcan en el momento adecuado.
+3.  **Ignorar lo Indeseado:** Para comportamientos que quieres eliminar, a menudo la estrategia más efectiva es ignorarlos por completo. Sin atención, el comportamiento tiende a extinguirse.
+4.  **Paciencia:** El entrenamiento lleva tiempo. Cada perro aprende a su propio ritmo. Mantén una actitud positiva y no te rindas.
 
-### Paso 1: Entrena con el Propietario (Tú Mismo)
+## Estrategias de Entrenamiento Paso a Paso para "Patas en el Suelo"
 
-Empieza en un entorno controlado donde el perro esté más cómodo y receptivo. Eres la persona más fácil para comenzar.
+### 1. Entrenando el Saludo Calmo Contigo
 
-1.  **Prepárate:** Ten premios pequeños y muy apetitosos a mano.
-2.  **La Entrada:** Sal de casa por un momento y vuelve a entrar. Tu perro probablemente saltará de alegría.
-3.  **Ignora el Salto:** En el momento en que salte, gírate inmediatamente, cruza los brazos y evita el contacto visual y verbal. Haz como si no existiera.
-4.  **Recompensa la Calma:** Tan pronto como tu perro ponga las cuatro patas en el suelo (aunque sea por un segundo), gírate hacia él, felicítalo con calma ("¡Buen chico!", "¡Quietooo!") y dale un premio. Acarícialo solo cuando esté en el suelo.
-5.  **Repite:** Sal y entra varias veces, repitiendo el proceso. Haz sesiones cortas (5-10 minutos) varias veces al día. El objetivo es que tu perro asocie "cuatro patas en el suelo = atención y premio" y "saltar = nadie me ve".
+Empieza en casa, contigo mismo o con los miembros de la familia, en un entorno de baja distracción.
 
-### Paso 2: Introduce la Orden "Sentado" o "Cuatro Patas"
+*   **El escenario:** Entra por la puerta principal. Si tu perro salta, **gírate inmediatamente** dándole la espalda. Cruza los brazos y evita el contacto visual, hablarle o tocarle.
+*   **La calma es la clave:** Espera a que las cuatro patas de tu perro estén firmemente en el suelo. Puede que necesite unos segundos para calmarse.
+*   **El refuerzo:** En el instante en que tu perro tenga las cuatro patas en el suelo, gírate, agáchate (si es posible) y prémiale con una golosina, elogios suaves y una caricia en el pecho o la barbilla (lugares que no le inciten a saltar).
+*   **Repetición:** Sal y vuelve a entrar varias veces al día. Al principio, hazlo por periodos cortos. Tu perro aprenderá rápidamente que la única forma de conseguir tu atención y recompensas es manteniendo las patas en el suelo.
 
-Una vez que tu perro entiende que saltar no funciona contigo, puedes introducir una orden.
+### 2. Enseñando un Comportamiento Alternativo (Sentado o Echado)
 
-1.  **Entrada Calmada:** Cuando entres a casa y tu perro esté a punto de saltar, pídele que se siente ("¡Sienta!").
-2.  **Guía y Recompensa:** Si se sienta, prémiale inmediatamente. Si no lo hace, espera a que sus cuatro patas estén en el suelo, entonces dale la orden de "Sienta" y recompénsalo si lo hace.
-3.  **Refuerza Alternativas:** Si tu perro tiene dificultades, puedes intentar guiarlo suavemente para que se siente o simplemente esperar el momento en que se mantenga erguido con sus cuatro patas en el suelo. Cuando lo haga, elógialo con entusiasmo y dale un premio, diciendo "¡Cuatro patas!" o "¡En el suelo!".
+Enseñar a tu perro a sentarse o echarse cuando saluda es una herramienta poderosa, ya que es un comportamiento incompatible con el salto.
 
-### Paso 3: Practica con Invitados (Simulacro y Realidad)
+*   **El comando "Siéntate":** Asegúrate de que tu perro domina el comando "Siéntate" en diferentes entornos.
+*   **Incorpora el saludo:** Cuando te acerques a tu perro o él a ti, antes de que salte, dile "Siéntate". Si obedece, prémiale abundantemente.
+*   **Práctica con distracciones:** Una vez que lo domine contigo, practica con otras personas de la familia en un entorno controlado.
 
-Este es el paso crucial, ya que los invitados suelen generar más excitación.
+### 3. El Rol Crucial de los Invitados
 
-1.  **Entrenando a los Invitados:** Pide a amigos o familiares que te ayuden. Explícales que deben seguir las mismas reglas: ignorar el salto, premiar la calma.
-2.  **Control con Correa:** Al principio, ten a tu perro con correa. Cuando el invitado se acerque o entre:
-    *   Si el perro intenta saltar, dale un pequeño tirón de correa hacia abajo y pide "¡Sienta!" o "¡Cuatro patas!".
-    *   Si se sienta o se mantiene calmado, el invitado debe elogiarlo (con voz tranquila) y darle un premio.
-    *   Si salta, el invitado debe girarse y retirarle la atención, esperando a que se calme.
-3.  **Saludos Breves y Controlados:** Empieza con saludos muy breves. El invitado puede saludar, darle un premio y luego ignorarlo o alejarse. Con el tiempo, puedes aumentar la duración del saludo.
-4.  **Incrementa la Distracción:** Una vez que tu perro es bueno con un solo invitado, introduce a más personas, en diferentes lugares (dentro, fuera de casa), y con diferentes niveles de emoción.
+Los invitados pueden ser la prueba de fuego y, a menudo, la fuente de retrocesos si no están preparados.
 
-## 4. Errores Comunes a Evitar
+*   **Instruye a tus invitados:** Pide a tus invitados que ignoren a tu perro si salta. Deben girarse y esperar a que el perro tenga las cuatro patas en el suelo antes de saludarlo.
+*   **Usa una correa:** Si tu perro está muy excitado con los visitantes, mantenlo con una correa corta. Cuando un invitado llegue, tu perro no podrá saltar. Pídele que se siente. Si se sienta y se mantiene calmado, permite que el invitado lo salude suavemente y le dé una golosina.
+*   **Agáchate:** Pide a tus invitados que se agachen para saludar a tu perro. Esto reduce la tentación de saltar para alcanzar su cara.
 
-*   **Reforzar sin Querer:** Empujar a tu perro, mirarlo a los ojos, o incluso un "¡basta!" pueden ser interpretados como atención. Cualquier interacción es refuerzo para algunos perros.
-*   **Falta de Consistencia:** Si un día permites el salto y al siguiente no, tu perro se confundirá y tardará más en aprender.
-*   **Castigo Físico:** Nunca castigues físicamente a tu perro por saltar. Esto puede generar miedo, ansiedad y dañar vuestro vínculo, además de no solucionar el problema de fondo.
-*   **Demasiada Expectación Demasiado Pronto:** Cada perro aprende a su propio ritmo. Sé paciente y celebra los pequeños avances.
+### 4. Manejo y Prevención
 
-## 5. Consideraciones Adicionales
+A veces, la mejor estrategia es prevenir la oportunidad de saltar, especialmente en las etapas iniciales del entrenamiento.
 
-*   **Ejercicio Suficiente:** Un perro cansado es un perro bien portado. Asegúrate de que tu perro reciba suficiente ejercicio físico y mental antes de esperar un comportamiento calmado, especialmente cuando hay visitas.
-*   **Juguetes de Distracción:** En situaciones de mucha excitación (como la llegada de un invitado), puedes intentar redirigir la energía de tu perro hacia un juguete masticable o interactivo que le encante.
-*   **Manejo del Entorno:** Si es necesario, utiliza una puerta para bebés o una correa para controlar la interacción inicial con los invitados hasta que el perro haya aprendido a saludar de forma más tranquila.
+*   **Barreras físicas:** Usa una puerta para bebés o ten a tu perro en otra habitación cuando lleguen las visitas, hasta que esté más calmado.
+*   **Pre-ejercicio:** Antes de que lleguen los invitados o antes de tu propia llegada, asegúrate de que tu perro haya tenido suficiente ejercicio físico y mental. Un perro cansado es un perro más tranquilo.
+*   **Refuerza la calma:** Si tu perro suele estar excitado cuando suena el timbre, entrena la calma asociando el sonido del timbre con una golosina mientras él está tranquilo.
 
-## Conclusión: Un Saludo Respetuoso y Cariñoso
+## Errores Comunes a Evitar
 
-Enseñar a tu perro a no saltar es una inversión en su buena educación y en la comodidad de todos. No solo protegerá a tus invitados de posibles sustos o manchas, sino que también le enseñará a tu perro a comunicarse de una manera más apropiada y a controlar sus impulsos. Con el tiempo, la paciencia y la consistencia, tu perro aprenderá que un saludo calmado y con las cuatro patas en el suelo es la mejor manera de recibir ese amor y atención que tanto anhela. ¡Prepárate para disfrutar de un perro más educado y unas bienvenidas mucho más agradables!
+*   **Reforzar el salto accidentalmente:** Gritar "¡No!" o empujar al perro cuando salta sigue siendo una forma de atención. Evítalo a toda costa.
+*   **Ser inconsistente:** Si a veces permites el salto y otras veces no, tu perro se confundirá y tardará más en aprender.
+*   **Castigo físico:** Nunca uses el castigo físico (como pisar las patas, golpear, etc.). Esto puede generar miedo, ansiedad y agresividad, dañando vuestro vínculo.
+*   **No practicar lo suficiente:** El entrenamiento requiere repetición en diferentes contextos y con diferentes personas.
+
+## Conclusión
+
+Enseñar a tu perro a no saltar sobre las personas es un proceso que requiere **paciencia, consistencia y un enfoque positivo**. Al seguir estas estrategias, no solo lograrás un comportamiento más deseable, sino que también fortalecerás el vínculo con tu mascota y harás que las interacciones con otras personas sean mucho más agradables y seguras. Recuerda que cada victoria, por pequeña que sea, es un paso adelante. ¡Con dedicación, tu perro aprenderá a saludar con las cuatro patas firmemente en el suelo!
 ```
