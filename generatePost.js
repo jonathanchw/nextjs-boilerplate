@@ -9,6 +9,7 @@ import {
   LlmSoftUnavailableError,
   LlmUserFacingError,
 } from "./lib/llmResilience.js";
+import { nextTitleHistoryAfterMark } from "./lib/titleRotation.js";
 
 dotenv.config();
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
@@ -60,11 +61,9 @@ function pickUniqueTitle() {
 }
 
 function markTitleUsed(title) {
+  const possibleTitles = loadPossibleTitles();
   const history = loadTitleHistory();
-  if (!history.includes(title)) {
-    history.push(title);
-    saveTitleHistory(history);
-  }
+  saveTitleHistory(nextTitleHistoryAfterMark(title, possibleTitles, history, MAX_HISTORY));
 }
 
 function setGitHubOutput(name, value) {
