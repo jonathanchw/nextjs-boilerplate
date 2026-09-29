@@ -34,6 +34,7 @@ jobs:
           echo "TITLE=${TITULOS[$RANDOM % ${#TITULOS[@]}]}" >> $GITHUB_ENV
 
       - name: Ejecutar script de generación
+        id: generate
         run: node generatePost.js "$TITLE"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -50,6 +51,7 @@ jobs:
           SITE_URL: ${{ secrets.SITE_URL }}
 
       - name: Commit y push de nuevos posts
+        if: steps.generate.outputs.generated == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

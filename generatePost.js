@@ -40,8 +40,8 @@ function loadPossibleTitles() {
   return [];
 }
 
-// Generar un título aleatorio sin repetición
-function generateUniqueTitle() {
+/** Pick a title without persisting — call markTitleUsed only after the post file is written. */
+function pickUniqueTitle() {
   const possibleTitles = loadPossibleTitles();
 
   if (possibleTitles.length === 0) {
@@ -50,18 +50,27 @@ function generateUniqueTitle() {
   }
 
   let history = loadTitleHistory();
-  let uniqueTitles = possibleTitles.filter(title => !history.includes(title));
+  let uniqueTitles = possibleTitles.filter((title) => !history.includes(title));
 
   if (uniqueTitles.length === 0) {
-    history = [];
     uniqueTitles = [...possibleTitles];
   }
 
-  const newTitle = uniqueTitles[Math.floor(Math.random() * uniqueTitles.length)];
-  history.push(newTitle);
-  saveTitleHistory(history);
+  return uniqueTitles[Math.floor(Math.random() * uniqueTitles.length)];
+}
 
-  return newTitle;
+function markTitleUsed(title) {
+  const history = loadTitleHistory();
+  if (!history.includes(title)) {
+    history.push(title);
+    saveTitleHistory(history);
+  }
+}
+
+function setGitHubOutput(name, value) {
+  const outputPath = process.env.GITHUB_OUTPUT;
+  if (!outputPath) return;
+  fs.appendFileSync(outputPath, `${name}=${value}\n`);
 }
 
 // 🔥 Función para obtener imágenes de Pexels
@@ -144,7 +153,7 @@ async function generateSocialImage(title, summary, imageUrl, slug) {
 }
 
 async function generatePost() {
-  const title = generateUniqueTitle();
+  const title = pickUniqueTitle();
   console.log(`✍️ Generando post sobre: ${title}...`);
 
   const prompt = `Genera un artículo en Markdown sobre: ${title}. Debe incluir:
@@ -186,6 +195,8 @@ image: "${imageUrl}"
 
   const postPath = path.join("posts", `${slug}.md`);
   fs.writeFileSync(postPath, frontMatter + content, "utf8");
+  markTitleUsed(title);
+  setGitHubOutput("generated", "true");
   console.log(`✅ Post generado en: ${postPath}`);
 
   // 🔥 Generar imagen social
