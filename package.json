@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node --test lib/**/*.test.js"
+    "test": "node --test lib/llmResilience.test.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",

@@ -4,7 +4,11 @@ import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { createCanvas, loadImage } from "canvas";
 import { postToTwitter } from "./postToTwitter.js";
-import { generateTextWithResilience, LlmUserFacingError } from "./lib/llmResilience.js";
+import {
+  generateTextWithResilience,
+  LlmSoftUnavailableError,
+  LlmUserFacingError,
+} from "./lib/llmResilience.js";
 
 dotenv.config();
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
@@ -154,6 +158,11 @@ async function generatePost() {
   try {
     content = await generateTextWithResilience(prompt);
   } catch (error) {
+    if (error instanceof LlmSoftUnavailableError) {
+      console.warn(`⚠️ ${error.message}`);
+      console.warn("⚠️ Generación omitida por saturación del proveedor de IA (sin fallo del workflow).");
+      return;
+    }
     const message =
       error instanceof LlmUserFacingError
         ? error.message

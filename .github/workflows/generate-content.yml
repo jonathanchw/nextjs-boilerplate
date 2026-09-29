@@ -9,6 +9,7 @@ on:
 jobs:
   generate_post:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     permissions:
       contents: write # 🔥 Permiso para hacer git push
