@@ -1,14 +1,12 @@
 import fs from "fs";
 import path from "path";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { createCanvas, loadImage } from "canvas";
 import { postToTwitter } from "./postToTwitter.js";
+import { generateTextWithResilience, LlmUserFacingError } from "./lib/llmResilience.js";
 
 dotenv.config();
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const PLACEHOLDER_IMAGE = "https://via.placeholder.com/600";
 const TITLES_FILE = path.join(process.cwd(), "usedTitles.json");
@@ -145,7 +143,6 @@ async function generatePost() {
   const title = generateUniqueTitle();
   console.log(`✍️ Generando post sobre: ${title}...`);
 
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
   const prompt = `Genera un artículo en Markdown sobre: ${title}. Debe incluir:
   - Un título llamativo
   - Un resumen breve
@@ -153,8 +150,18 @@ async function generatePost() {
   - Texto en español
   - Un bloque Front Matter YAML con: title, date, description, tags e image`;
 
-  const result = await model.generateContent(prompt);
-  const content = result.response.text();
+  let content;
+  try {
+    content = await generateTextWithResilience(prompt);
+  } catch (error) {
+    const message =
+      error instanceof LlmUserFacingError
+        ? error.message
+        : "No se pudo generar el artículo. El servicio de IA no está disponible en este momento. Inténtalo de nuevo más tarde.";
+    console.error(`❌ ${message}`);
+    process.exitCode = 1;
+    return;
+  }
   const slug = title.toLowerCase().replace(/\s+/g, "-");
 
   console.log(`🖼 Buscando imagen para: ${title}...`);
@@ -198,11 +205,15 @@ image: "${imageUrl}"
   }
 
   await postToTwitter(tweetText, imagePath);
-
-
 }
 
-generatePost();
+generatePost().catch((error) => {
+  console.error(
+    "❌ Error inesperado al generar el post. Inténtalo de nuevo más tarde.",
+    error instanceof Error ? error.message : error,
+  );
+  process.exit(1);
+});
 
 
 

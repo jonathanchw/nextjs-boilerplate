@@ -1,5 +1,15 @@
 This is an automated post generator powered by Gemini AI, using GitHub Actions bots to run tasks, deployed on the web and X (formerly Twitter).
 
+### Resilience (Gemini overload / 503)
+
+The workflow **Generar Post Automáticamente** runs `generatePost.js`, which retries transient Gemini failures (503, 429, 5xx, timeouts) with exponential backoff and jitter, then tries a fallback Gemini model (`GEMINI_FALLBACK_MODEL`, default `gemini-2.0-flash`). If you set `OPENAI_API_KEY`, OpenAI is used as an optional last resort (no extra npm packages).
+
+Copy `.env.example` to `.env` for local runs. In GitHub Actions, add secrets as needed (`GEMINI_API_KEY` is required; `OPENAI_API_KEY` is optional).
+
+To pause the cron job, disable or edit the schedule in `.github/workflows/generate-content.yml`, or disable the workflow in the repository **Actions** tab.
+
+Run unit tests: `npm test`.
+
 ### Links
 - [Demo Site -> https://mascotafelizshop.vercel.app/](https://mascotafelizshop.vercel.app/)
 - [Social Media X -> https://x.com/auto_blogs101](https://x.com/auto_blogs101)
