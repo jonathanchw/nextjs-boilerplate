@@ -9,6 +9,7 @@ on:
 jobs:
   generate_post:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     permissions:
       contents: write # 🔥 Permiso para hacer git push
@@ -33,9 +34,15 @@ jobs:
           echo "TITLE=${TITULOS[$RANDOM % ${#TITULOS[@]}]}" >> $GITHUB_ENV
 
       - name: Ejecutar script de generación
+        id: generate
         run: node generatePost.js "$TITLE"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Optional: override models / add OpenAI fallback (see .env.example)
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_MODEL: ${{ vars.GEMINI_FALLBACK_MODEL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
@@ -44,6 +51,7 @@ jobs:
           SITE_URL: ${{ secrets.SITE_URL }}
 
       - name: Commit y push de nuevos posts
+        if: ${{ !cancelled() && steps.generate.outputs.generated == 'true' }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

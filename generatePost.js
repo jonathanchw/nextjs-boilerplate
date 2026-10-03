@@ -1,14 +1,17 @@
 import fs from "fs";
 import path from "path";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { createCanvas, loadImage } from "canvas";
 import { postToTwitter } from "./postToTwitter.js";
+import {
+  generateTextWithResilience,
+  LlmSoftUnavailableError,
+  LlmUserFacingError,
+} from "./lib/llmResilience.js";
+import { nextTitleHistoryAfterMark } from "./lib/titleRotation.js";
 
 dotenv.config();
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const PLACEHOLDER_IMAGE = "https://via.placeholder.com/600";
 const TITLES_FILE = path.join(process.cwd(), "usedTitles.json");
@@ -38,8 +41,8 @@ function loadPossibleTitles() {
   return [];
 }
 
-// Generar un título aleatorio sin repetición
-function generateUniqueTitle() {
+/** Pick a title without persisting — call markTitleUsed only after the post file is written. */
+function pickUniqueTitle() {
   const possibleTitles = loadPossibleTitles();
 
   if (possibleTitles.length === 0) {
@@ -48,18 +51,25 @@ function generateUniqueTitle() {
   }
 
   let history = loadTitleHistory();
-  let uniqueTitles = possibleTitles.filter(title => !history.includes(title));
+  let uniqueTitles = possibleTitles.filter((title) => !history.includes(title));
 
   if (uniqueTitles.length === 0) {
-    history = [];
     uniqueTitles = [...possibleTitles];
   }
 
-  const newTitle = uniqueTitles[Math.floor(Math.random() * uniqueTitles.length)];
-  history.push(newTitle);
-  saveTitleHistory(history);
+  return uniqueTitles[Math.floor(Math.random() * uniqueTitles.length)];
+}
 
-  return newTitle;
+function markTitleUsed(title) {
+  const possibleTitles = loadPossibleTitles();
+  const history = loadTitleHistory();
+  saveTitleHistory(nextTitleHistoryAfterMark(title, possibleTitles, history, MAX_HISTORY));
+}
+
+function setGitHubOutput(name, value) {
+  const outputPath = process.env.GITHUB_OUTPUT;
+  if (!outputPath) return;
+  fs.appendFileSync(outputPath, `${name}=${value}\n`);
 }
 
 // 🔥 Función para obtener imágenes de Pexels
@@ -142,10 +152,9 @@ async function generateSocialImage(title, summary, imageUrl, slug) {
 }
 
 async function generatePost() {
-  const title = generateUniqueTitle();
+  const title = pickUniqueTitle();
   console.log(`✍️ Generando post sobre: ${title}...`);
 
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
   const prompt = `Genera un artículo en Markdown sobre: ${title}. Debe incluir:
   - Un título llamativo
   - Un resumen breve
@@ -153,8 +162,23 @@ async function generatePost() {
   - Texto en español
   - Un bloque Front Matter YAML con: title, date, description, tags e image`;
 
-  const result = await model.generateContent(prompt);
-  const content = result.response.text();
+  let content;
+  try {
+    content = await generateTextWithResilience(prompt);
+  } catch (error) {
+    if (error instanceof LlmSoftUnavailableError) {
+      console.warn(`⚠️ ${error.message}`);
+      console.warn("⚠️ Generación omitida por saturación del proveedor de IA (sin fallo del workflow).");
+      return;
+    }
+    const message =
+      error instanceof LlmUserFacingError
+        ? error.message
+        : "No se pudo generar el artículo. El servicio de IA no está disponible en este momento. Inténtalo de nuevo más tarde.";
+    console.error(`❌ ${message}`);
+    process.exitCode = 1;
+    return;
+  }
   const slug = title.toLowerCase().replace(/\s+/g, "-");
 
   console.log(`🖼 Buscando imagen para: ${title}...`);
@@ -170,6 +194,8 @@ image: "${imageUrl}"
 
   const postPath = path.join("posts", `${slug}.md`);
   fs.writeFileSync(postPath, frontMatter + content, "utf8");
+  markTitleUsed(title);
+  setGitHubOutput("generated", "true");
   console.log(`✅ Post generado en: ${postPath}`);
 
   // 🔥 Generar imagen social
@@ -198,11 +224,15 @@ image: "${imageUrl}"
   }
 
   await postToTwitter(tweetText, imagePath);
-
-
 }
 
-generatePost();
+generatePost().catch((error) => {
+  console.error(
+    "❌ Error inesperado al generar el post. Inténtalo de nuevo más tarde.",
+    error instanceof Error ? error.message : error,
+  );
+  process.exit(1);
+});
 
 
 
